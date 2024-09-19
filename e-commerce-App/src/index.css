@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .shadow-red {
+    text-shadow:1px 6px 0 theme('colors.red.500'),1px 11px 0 theme('colors.indigo.500'),1px 15px 0 theme('colors.green.500') ;
+    
+  }
+
+  
+}
+
+
+  @font-face {
+    font-family:'Brush';
+    src: url('/public/Fonts/Dude.ttf');
+  }
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+}
+
+
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar track */
+.hide-scroll::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Hide scrollbar thumb */
+.hide-scroll::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scroll {
+  scrollbar-width: none; /* Hide scrollbar */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+}
+
+.glass-container{
+  position: relative;
+}
+
+.glass-container::before{
+  @apply absolute -inset-[10px] -z-10 rounded-[3rem] border border-slate-100/20 bg-slate-200/10 backdrop-blur-md;
+  content: '';
+}
+
+.glass-container2{
+  position: relative;
+}
+
+.glass-container2::before{
+  @apply absolute inset-[3px] -z-10 rounded-[3rem] border border-slate-100/20 bg-slate-200/10 backdrop-blur-md;
+  content: '';
+}
+
+.signal-line{
+  --rotation: 90deg;
+  @apply h-[3px] w-[2.5rem] bg-gradient-to-t;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  background-image: linear-gradient(
+    var(--rotation),
+    rgba(255,255,255,0) 50%,
+    #c39dff 50%,
+    rgba(255,255,255,0) 70%
+  );
+  background-size: 500% 500%;
+
+}
+@layer base {
+  .hero-ring{
+   @apply absolute inset-0  border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5
+  }
+}

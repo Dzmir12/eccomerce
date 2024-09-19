@@ -1,0 +1,34 @@
+
+.clip-hexagon {
+    /* clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); */
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  }
+
+
+  .clip-polygun{
+    /* clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%); */
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 1%);
+  }
+
+  .clip-custom {
+    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+  }
+
+  .clip-special{
+    clip-path: url(#clip-squiggle);
+    
+  }
+
+  .clip-circle{
+    clip-path: url(#clip-circle);
+  }
+
+  /* .clip-special2{
+    clip-path: url(#clip-squiggle2);
+  } */
+
+  .custom {
+    clip-path: url(#clip-circle);
+  }
+
+  
